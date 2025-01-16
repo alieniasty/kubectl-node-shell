@@ -1,4 +1,3 @@
-# src/kubectl-node_shell.py
 #!/usr/bin/env python3
 
 import argparse
