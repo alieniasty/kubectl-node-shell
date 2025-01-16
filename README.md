@@ -4,21 +4,40 @@ A kubectl plugin for getting shell access to Kubernetes nodes using privileged c
 
 ## Prerequisites
 
-- Windows
 - Python 3.10+
-- Chocolatey package manager
 - kubectl
 
 ## Installation
 
+### Windows
 ```powershell
 choco install kubectl-node-shell
+```
+
+### Linux
+```bash
+git clone https://github.com/alieniasty/kubectl-node-shell.git
+cd kubectl-node-shell/package/linux
+sudo ./install.sh
+```
+
+## Uninstallation
+
+### Windows
+```powershell
+choco uninstall kubectl-node-shell
+```
+
+### Linux
+```bash
+cd kubectl-node-shell/package/linux
+sudo ./uninstall.sh
 ```
 
 ## Usage
 
 Get shell access to a node:
-```powershell
+```bash
 kubectl node shell <node-name>
 ```
 
@@ -32,18 +51,6 @@ The pod specification:
 - Configured with highest priority to ensure scheduling
 - Uses nsenter to access host namespaces
 - Automatically cleans up after shell session ends
-
-## Development
-
-To build and install locally:
-
-1. Clone the repository
-2. Navigate to package/chocolatey directory
-3. Run:
-```powershell
-choco pack
-choco install kubectl-node-shell -s . -y
-```
 
 ## Security
 

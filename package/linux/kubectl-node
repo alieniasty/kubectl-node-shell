@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ "$1" = "shell" ]; then
+    shift
+    python3 /usr/local/bin/kubectl-node_shell.py "$@"
+else
+    python3 /usr/local/bin/kubectl-node_shell.py "$@"
+fi
